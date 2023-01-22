@@ -24,24 +24,24 @@ class Chronometer {
   computeTwoDigitNumber(value) {
     
     if (value < 10){
-      return `0${value}`
+      return `0${value}`;
     } else {
-      return `${value}`
+      return `${value}`;
     }
   }
 
   stop() {
-    return  clearInterval(this.intervalId)
+    return  clearInterval(this.intervalId);
   }
 
   reset() {
-    return this.currentTime= 0
+    return this.currentTime= 0;
   }
 
   split() {
-    let minutes = this.computeTwoDigitNumber(this.getMinutes())
-    let seconds = this.computeTwoDigitNumber(this.getSeconds())
+    let minutes = this.computeTwoDigitNumber(this.getMinutes());
+    let seconds = this.computeTwoDigitNumber(this.getSeconds());
 
-    return `${minutes}:${seconds}`
+    return `${minutes}:${seconds}`;
   }
 }
